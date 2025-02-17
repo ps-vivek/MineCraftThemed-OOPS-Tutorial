@@ -1,24 +1,25 @@
 package oops;
 
 
+import oops.inheritance.IronBlock;
+import oops.inheritance.MinecraftBlock;
+import oops.inheritance.StoneBlock;
+import oops.inheritance.WoddenBlock;
+
+
 public class MineCraftMain {
     public static void main(String[] args) {
-        // Creating objects (Instances of the class)
-        MinecraftBlock woodenBlock = new MinecraftBlock("wood","Brown");
+        // Creating objects (Instances of the subclasses)
+        MinecraftBlock woodenBlock = new WoddenBlock("gold");
+        MinecraftBlock stoneBlock = new StoneBlock("Gray",2);
 
-        MinecraftBlock stoneBlock = new MinecraftBlock("iron","Gray");
         // Using objects
         woodenBlock.place(); // Outputs: Placing a Brown Wood block.
         stoneBlock.place(); // Outputs: Placing a Gray Stone block.
 
-        MinecraftBlock ironBlock = new MinecraftBlock();
-        ironBlock.weight = 3;
-        //Private fields cant be accessed outside
-        //ironBlock.color = "blue";
-        ironBlock.place();
+        // Creating an iron block using the default constructor
+        MinecraftBlock ironBlock = new IronBlock("brown");
 
-        ironBlock.setColor("copper");
-        ironBlock.setMaterial("Iron");
         ironBlock.place();
     }
 }
