@@ -28,13 +28,9 @@ package oops;
 public class MineCraftMain {
     public static void main(String[] args) {
         // Creating objects (Instances of the class)
-        MinecraftBlock woodenBlock = new MinecraftBlock();
-        woodenBlock.material="Wood";
-        woodenBlock.color="Brown";
+        MinecraftBlock woodenBlock = new MinecraftBlock("wood","Brown");
 
-        MinecraftBlock stoneBlock = new MinecraftBlock();
-        stoneBlock.material="Stone";
-        stoneBlock.color="Gray";
+        MinecraftBlock stoneBlock = new MinecraftBlock("iron","Gray");
         // Using objects
         woodenBlock.place(); // Outputs: Placing a Brown Wood block.
         stoneBlock.place(); // Outputs: Placing a Gray Stone block.
