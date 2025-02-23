@@ -1,6 +1,12 @@
 package oops.inheritance;
 
-public class MinecraftBlock {
+/*
+Abstract Class:
+	• Blueprint with Implementation: An abstract class can provide both a blueprint (abstract methods) and actual implementation (concrete methods).
+	• Partial Blueprint: It can define some methods that must be implemented by subclasses, and also provide default implementations for other methods.
+State and Behavior: It can have fields (state) and methods (behavior) that can be used by subclasses.
+ */
+public abstract  class MinecraftBlock {
     private String material;
     private String color;
 
@@ -8,6 +14,8 @@ public class MinecraftBlock {
         this.material = material;
         this.color = color;
     }
+
+    public abstract void getBlockStrength();
 
     public String getMaterial() {
         return material;

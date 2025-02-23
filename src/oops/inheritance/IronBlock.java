@@ -16,4 +16,10 @@ public class IronBlock extends MinecraftBlock {
     public void destroy() {
         System.out.println("Destroying an Iron block with significant effort. It breaks with a loud clang.");
     }
+
+    // Implementing the abstract method
+    @Override
+    public void getBlockStrength() {
+        System.out.println("Iron block has high strength.");
+    }
 }

@@ -27,4 +27,9 @@ public class StoneBlock extends MinecraftBlock {
     public void destroy() {
         System.out.println("Destroying a Stone block with effort. It crumbles into smaller rocks.");
     }
+    // Implementing the abstract method
+    @Override
+    public void getBlockStrength() {
+        System.out.println("Stone block has medium strength.");
+    }
 }
