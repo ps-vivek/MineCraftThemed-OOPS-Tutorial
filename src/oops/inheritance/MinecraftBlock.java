@@ -1,9 +1,13 @@
 package oops.inheritance;
 
 public class MinecraftBlock {
-    // Attributes (Properties)
-    private String material = "Gold";
-    private String color = "Yellow";
+    private String material;
+    private String color;
+
+    public MinecraftBlock(String material, String color) {
+        this.material = material;
+        this.color = color;
+    }
 
     public String getMaterial() {
         return material;
@@ -21,16 +25,13 @@ public class MinecraftBlock {
         this.color = color;
     }
 
-    MinecraftBlock(String material, String color) {
-        this.material = material;
-        this.color = color;
-    }
-
-    MinecraftBlock() {
-    }
-
-    // Method (Action)
+    // Method to be overridden by subclasses
     public void place() {
-        System.out.println("Placing a " + this.getColor() + " " + this.getMaterial() + " block.");
+        System.out.println("Placing a " + this.getColor() + " " + this.getMaterial() + " block inside MinecraftBlock class.");
+    }
+
+    // New method to be overridden by subclasses
+    public void destroy() {
+        System.out.println("Destroying a " + this.getMaterial() + " block.");
     }
 }
