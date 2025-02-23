@@ -1,6 +1,6 @@
 package oops.inheritance;
 
-public class IronBlock extends MinecraftBlock {
+public class IronBlock extends MinecraftBlock  implements Craftable  {
     public IronBlock(String color) {
         super("Iron", color);
     }
@@ -21,5 +21,20 @@ public class IronBlock extends MinecraftBlock {
     @Override
     public void getBlockStrength() {
         System.out.println("Iron block has high strength.");
+    }
+
+    @Override
+    public void craft() {
+        System.out.println("Crafting an iron item.");
+    }
+
+    @Override
+    public void craft(String item) {
+        System.out.println("Crafting " + item + " from iron.");
+    }
+
+    @Override
+    public String getCraftingMaterial() {
+        return "Iron";
     }
 }
